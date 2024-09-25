@@ -26,13 +26,18 @@ except errors.PyMongoError as e:
 
 # Dummy data for AQI of Kathmandu (with AQI range: low and high)
 aqi_data = [
-    {"date": datetime(2024, 9, 22), "day": "Sunday", "aqi": {"low": 145, "high": 155}, "temperature": 25, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 23), "day": "Monday", "aqi": {"low": 135, "high": 145}, "temperature": 26, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 24), "day": "Tuesday", "aqi": {"low": 125, "high": 135}, "temperature": 27, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 25), "day": "Wednesday", "aqi": {"low": 130, "high": 140}, "temperature": 24, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 26), "day": "Thursday", "aqi": {"low": 140, "high": 150}, "temperature": 25, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 27), "day": "Friday", "aqi": {"low": 155, "high": 165}, "temperature": 28, "location": "Kathmandu"},
-    {"date": datetime(2024, 9, 28), "day": "Saturday", "aqi": {"low": 150, "high": 160}, "temperature": 29, "location": "Kathmandu"}
+    {
+        "city": "Kathmandu",
+        "data": [
+            {"date": datetime(2024, 9, 22), "day": "Sunday", "details": {"aqi": {"low": 145, "high": 155}, "temperature": 25}},
+            {"date": datetime(2024, 9, 23), "day": "Monday", "details": {"aqi": {"low": 135, "high": 145}, "temperature": 26}},
+            {"date": datetime(2024, 9, 24), "day": "Tuesday", "details": {"aqi": {"low": 125, "high": 135}, "temperature": 27}},
+            {"date": datetime(2024, 9, 25), "day": "Wednesday", "details": {"aqi": {"low": 130, "high": 140}, "temperature": 24}},
+            {"date": datetime(2024, 9, 26), "day": "Thursday", "details": {"aqi": {"low": 140, "high": 150}, "temperature": 25}},
+            {"date": datetime(2024, 9, 27), "day": "Friday", "details": {"aqi": {"low": 155, "high": 165}, "temperature": 28}},
+            {"date": datetime(2024, 9, 28), "day": "Saturday", "details": {"aqi": {"low": 150, "high": 160}, "temperature": 29}}
+        ]
+    }
 ]
 
 # Attempt to insert the documents into the collection
