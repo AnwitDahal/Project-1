@@ -1,2 +1,0 @@
-ozon3
-pandas
